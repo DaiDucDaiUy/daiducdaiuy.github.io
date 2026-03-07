@@ -21,19 +21,16 @@
     --radius: 14px;
   }
 
-  html, body {
-    height: 100%;
-  }
-
   body {
     font-family: 'Nunito', sans-serif;
     background: var(--bg);
     color: var(--text);
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 32px 24px;
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
     background-image:
       radial-gradient(ellipse 60% 40% at 80% 10%, rgba(79,142,247,0.08) 0%, transparent 60%),
@@ -148,6 +145,11 @@
   .done-icon { font-size: 22px; }
   .done p { font-size: 14px; font-weight: 600; color: var(--green); }
 
+  @media (max-width: 640px) {
+    .steps { grid-template-columns: 1fr; }
+    body { align-items: flex-start; }
+  }
+
   @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes fadeUp   { from { opacity: 0; transform: translateY(16px);  } to { opacity: 1; transform: translateY(0); } }
 </style>
@@ -227,7 +229,7 @@
         <div class="step-title">Cài đặt Playlist</div>
       </div>
       <div class="rows">
-        <div class="row">Mở <b>TiviMate</b> vào <b>Settings → Playlists</b> — bạn sẽ thấy rất nhiều playlist có tên <b>xtream-ie.com</b></div>
+        <div class="row">Mở TiviMate vào <b>Settings → Playlists</b> — bạn sẽ thấy rất nhiều playlist có tên <b>xtream-ie.com</b>.</div>
         <div class="row">Chọn một playlist thay URL bằng link IPTV của bạn:
           <div class="path">🔗 https://fpt.ddns.vn</div>
         </div>
